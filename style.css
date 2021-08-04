@@ -8,63 +8,10 @@
 	font-family: Dossaemmul;
 	src: url('./DOSSaemmul.woff') format('woff');
 }
-@media screen and (min-width:1320px){
-	.navbar{display: flex;justify-content: space-between;}
-    .navbar .navright li ul{
-        right:0px;
-        }
-	.navml{display:none;}
-	.navmr{display:none;}
-	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
-	.navbar ul li div{margin-left:3px}
-}
-@media screen and (max-width:1320px) and (min-width:1170px){
-	.navbar{display: flex;justify-content: space-between;}
-    .navbar .navright li ul{
-        right:0px;
-    }
-	.navml{display:none;}
-	.navmr{display:none;}
-	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
-}
-@media screen and (max-width:1169px) and (min-width:800px){
-	.navbar{display: flex;justify-content: space-between;}
-	.navbar .navright li ul{
-		right:0px;
-		}
-	.navmr{display:none;}
-	.navml{display:none;}
-	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
-	.navbar li a div{
-		text-align:center;
-		max-height:0px;
-		min-width:21px;
-		position:absolute;
-		overflow: hidden;
-		top:60px;
-		left:0;
-		z-index:190;
-		transition: max-height 0.3s;
-		transition: padding 0.1s;
-		line-height:normal;
-		padding:0px;
-		border-radius:17.5px;
-	}
-	.navbar li:hover a div{
-		max-height:100px;
-		padding:5px;
-	}
-}
-@media screen and (max-width:799px){
-.navbar{display: flex;justify-content: space-between;}
-.navright{display:none;}
-.navleft{display:none;}
-p,a,button,select{font-size:0.9em;}.p08{font-size:0.8em;}.p15{font-size:1.2em;}.p12{font-size:1em;}.p2{font-size: 1.5em;}
-}
 *{font-family:'Noto Sans KR';outline: none;}
 ::selection{color:mediumaquamarine}
 body{margin:0; background: black;color:white;}
-.contentsBox{padding: top 50px;margin:0 50px}
+.contentsBox{padding: top 50px;margin:0 5%}
 .titleBox{
 	display: flex;
 	flex-direction: column;
@@ -202,7 +149,7 @@ body{margin:0; background: black;color:white;}
 .navbar li .useropen{display:block;}
 .navbar li .userclose{display:none;}
 .navbar .navmr li ul a{
-	background: white;
+	background: black;
 	color:#ffffff;
 	display:block;
 	font-weight:normal;
@@ -217,7 +164,62 @@ body{margin:0; background: black;color:white;}
 	width:100%;
 	}
 /*여기까지 네비게이션 바 CSS*/
-
+@media screen and (min-width:1320px){
+	.navbar{display: flex;justify-content: space-between;}
+    .navbar .navright li ul{
+        right:0px;
+        }
+	.navml{display:none;}
+	.navmr{display:none;}
+	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
+	.navbar ul li div{margin-left:3px}
+}
+@media screen and (max-width:1320px) and (min-width:1170px){
+	.navbar{display: flex;justify-content: space-between;}
+    .navbar .navright li ul{
+        right:0px;
+    }
+	.navml{display:none;}
+	.navmr{display:none;}
+	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
+}
+@media screen and (max-width:1169px) and (min-width:800px){
+	.navbar{display: flex;justify-content: space-between;}
+	.navbar .navright li ul{
+		right:0px;
+		}
+	.navmr{display:none;}
+	.navml{display:none;}
+	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
+	.navbar li a div{
+		text-align:center;
+		max-height:0px;
+		min-width:21px;
+		position:absolute;
+		overflow: hidden;
+		top:60px;
+		left:0;
+		z-index:190;
+		transition: max-height 0.3s;
+		transition: padding 0.1s;
+		line-height:normal;
+		padding:0px;
+		border-radius:17.5px;
+	}
+	.navbar li:hover a div{
+		max-height:100px;
+		padding:5px;
+	}
+}
+@media screen and (max-width:799px){
+.navbar{display: flex;justify-content: space-between;}
+.navright{display:none;}
+.navleft{display:none;}
+p,a,button,select{font-size:0.9em;}.p08{font-size:0.8em;}.p15{font-size:1.2em;}.p12{font-size:1em;}.p2{font-size: 1.5em;}
+.mainTitle{
+	font-size: 2.5em;
+}
+}
 @media (prefers-color-scheme: dark) {
     *{color:#eeeeee;}
     select{color:white}
