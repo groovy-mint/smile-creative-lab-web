@@ -1,33 +1,81 @@
-<html><head>
+<html>
+<head>
     <title>SmileFactory</title>
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <style>
-        .button { /*브튼*/
-        margin: 5px;
-        border: 5px solid #a0a0a0;
-        border-radius: 35px;
-        width: 300px;
-        height: 70px;
-        font-size: 16px;
-        background-color: rgba(0, 0, 0, 0)
-    }</style>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        function dropDownMobile(dir,where){
+    if(dir==true&&where=='login'){
+        $(".navbar li ."+where+"open").css({'display' : 'none'});
+        $(".navbar li ."+where+"close").css({'display' : 'block'});
+        $(".navbar .navmr li #"+where+"Menu").css({'-webkit-animation-name' : 'dropDownMenuDown', 'animation-name' : 'dropDownMenuDown', 'display' : 'block'});
+    }else if(dir==false&&where=='login'){
+        $(".navbar li ."+where+"open").css({'display' : 'block'});
+        $(".navbar li ."+where+"close").css({'display' : 'none'});
+        $(".navbar .navmr li #"+where+"Menu").css({'-webkit-animation-name' : 'dropDownMenuUp', 'animation-name' : 'dropDownMenuUp'});
+    }else if(dir==true&&(where=='main'||where=='user')){
+        $(".navbar li ."+where+"open").css({'display' : 'none'});
+        $(".navbar li ."+where+"close").css({'display' : 'block'});
+        menuCount=$("#"+where+"Menu li").length;
+        $("#"+where+"Menu").animate({ 'min-height' : (menuCount*50) }, 'fast');
+    }else if(dir==false&&(where=='main'||where=='user')){
+        $(".navbar li ."+where+"open").css({'display' : 'block'});
+        $(".navbar li ."+where+"close").css({'display' : 'none'});
+        $("#"+where+"Menu").animate({ 'min-height' : '0px' }, 'fast');
+    }
+}
+    </script>
 </head>
-    <body style="
-        background-color: black;
-        margin: 0px;
-        ">
-        <div style="text-align:center; color: #a0a0a0; position:absolute;
-                    width:100%; top:50%; margin-top:-285px;
-                    ">
-<p style="
-    color: white;
-    font-size: 1.7em;
-    margin: 0;
-    text-shadow: 0px 0px 5px white;
-">우리 곧 만나요!</p>
-            
-            
-            
+<body>
+    <nav class="navbar">
+        <div class="navml">
+            <ul>
+                <li><a href="/" class="title">SmileFactory</a></li>
+            </ul>
         </div>
-</body></html>
+        <div class="navleft">
+            <ul>
+                <li><span class="title">SmileFactory</span></li>
+                <li><a href="#" class="nav-item"><i class="xi-home-o"></i><div> 홈</div></a></li>
+                <li><a href="#" class="nav-item">소개</a></li>
+                <li><a href="#" class="nav-item"><i class="xi-cloud"></i><div> Cotton Candy</div></a></li>
+                <li><a href="#" class="nav-item"><i class="xi-keyboard-o"></i><div> Smile Typing</div></a></li>
+                <li><a href="#" class="nav-item"><i class="xi-help-o"></i><div> 서포트</div></a></li>
+            </ul>
+        </div>
+        <div class="navright">
+            <ul>
+                <li><a href="#"><i class="xi-translate"></i> <i class="xi-caret-down-min"></i></a>
+                    <ul>
+                        <li><a href="/jp">日本語</a></li>
+                        <li><a href="/en">English</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navmr">
+            <ul>
+                <li><a class="mainopen" href="javascript:void(0)" onclick="dropDownMobile(true,'main')"><i class="xi-bars"></i> 메뉴</a>
+                    <a class="mainclose" href="javascript:void(0)" onclick="dropDownMobile(false,'main')"><i class="xi-close"></i> 닫기</a>
+                    <ul id="mainMenu">
+                        <li><a href="/" class="nav-item"><i class="xi-home-o"></i> 홈</a></li>
+                        <li><a href="/modelpack" class="nav-item"><i class="xi-box"></i> RTM 모델팩 </a></li>
+                        <li><a href="/imgup" class="nav-item"><i class="xi-library-image-o"></i> 이미지 호스팅</a></li>
+                        <li><a href="/cotton_candy" class="nav-item"><i class="xi-cloud"></i> Cotton Candy </a></li>
+                        <li><a href="/support" class="nav-item"><i class="xi-help-o"></i> 서포트</a></li>
+                        <li><a href="/jp"><i class="xi-translate"></i> 日本語</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="contentsBox">
+        <div class="titleBox">
+            <p class="mainTitle">영업 준비중.</p>
+        </div>
+    </div>
+</body>
+</html>
