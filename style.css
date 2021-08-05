@@ -11,13 +11,13 @@
 *{font-family:'Noto Sans KR';outline: none;}
 ::selection{color:mediumaquamarine}
 body{margin:0; background: black;color:white;}
-.contentsBox{padding: top 50px;margin:0 5%}
+.contentsBox{padding-top: 50px;}
 .titleBox{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: calc(100vh - 50px);
 }
 .mainTitle{font-family: Dossaemmul;
 	color: transparent;
@@ -35,6 +35,21 @@ body{margin:0; background: black;color:white;}
 .mainDesc{font-family: Dunggeunmo;
 	font-size: 1.5em;
 	text-align: center;
+}
+.ccTitle{
+	font-size:5em;
+	line-height: 0.1em;
+}
+.ccDesc{
+	font-size:3em;
+	line-height: 0.1em;
+}
+footer{
+	background: black;
+	display: flex;
+	padding: 15px 30px;
+	justify-content: space-between;
+    align-items: center;
 }
 /*여기부터 네비게이션 바 CSS*/
 .navbar{
