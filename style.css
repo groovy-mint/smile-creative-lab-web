@@ -38,6 +38,9 @@ body{margin:0; background: black;color:white;}
 }
 /*여기부터 네비게이션 바 CSS*/
 .navbar{
+	display: none;
+
+
 	background: black;
 	width: 100%;
 	border:none;
