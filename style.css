@@ -38,11 +38,11 @@ body{margin:0; background: black;color:white;}
 }
 .ccTitle{
 	font-size:5em;
-	line-height: 0.1em;
+	margin-top: 20px;
 }
 .ccDesc{
 	font-size:3em;
-	line-height: 0.1em;
+	margin:0
 }
 footer{
 	background: black;
