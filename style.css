@@ -23,7 +23,7 @@ a:link{
 }
 ::selection{color:mediumaquamarine}
 body{margin:0; background: black;color:white;}
-.contentsBox{padding: 50px 0;}
+.contentsBox{padding-top: 50px}
 .titleBox{
 	display: flex;
 	flex-direction: column;
