@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Smile Creative Lab. - Cotton Candy</title>
+    <title>Smile Creative Lab. - Smile Typing</title>
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../style.css">
@@ -28,7 +28,32 @@
     }
 }
     </script>
+    <script>
+function changeText(cont1,cont2,speed){
+    var text=cont1.text();
+    var content=text.split("");
+    var i=0;
+    function show(){
+        if(i<content.length)
+        {		
+            cont2.append(content[i]);
+            i=i+1;
+        };
+    };
+    var timer=setInterval(show,speed);	
+};
+
+$(document).ready(function(){
+    changeText($(".tempDesc"),$(".typingDesc"),150); //  150 = the Delay time in milliseconds between strokes.
+    setTimeout(function(){changeText($(".tempTitle"),$(".typingTitle"),150);},2550)
+});
+    </script>
     <style>
+    @keyframes cursor{ 
+      0%{border-right: 2px solid #fff} 
+      50%{border-right: 2px solid #000} 
+      100%{border-right: 2px solid #fff} 
+    }
         .contentsBox{
             color: black;
             background:white;
@@ -46,9 +71,6 @@
         .topDownloadBtn:hover{
             background: #000;
             color:white
-        }
-        .titleBox{
-            background: url(../sources/cc-web-background.png) no-repeat center center; background-size: cover;
         }
         .lighter{
             background-color: rgba(255,255,255,0.8);
@@ -113,11 +135,17 @@
         table td:nth-child(1){
             border-right:1px solid black
         }
-        .ccTitle{
+        .typingTitle{
+            animation-name: cursor; 
+            animation-duration: 0.5s; 
+            animation-iteration-count: infinite;
         	font-size:5em;
         	margin: 20px 0;
         }
-        .ccDesc{
+        .typingDesc{
+            animation-name: cursor; 
+            animation-duration: 0.5s; 
+            animation-iteration-count: infinite;
         	font-size:3em;
         	margin:0
         }
@@ -170,8 +198,10 @@
         <section>
             <article>
                 <div class="titleBox">
-                    <p class="ccDesc">학급 관리를 도와줄 맛있는 친구</p>
-                    <p class="ccTitle">Cotton Candy</p>
+                    <span class="tempDesc" style="display: none;">쁘게 웃으면서 타자 연습해요.</span>
+                    <span class="tempTitle" style="display: none;">mile Typing</span>
+                    <p class="typingDesc">이</p>
+                    <p class="typingTitle">S</p>
                     <button class="topDownloadBtn" onclick="location.href='#download'">다운로드</button>
                     <p>자세히 알아보려면 밑으로 스크롤</p>
                     <i class="xi-angle-down"></i>
@@ -181,21 +211,21 @@
         <section>
             <article class="introBox">
                 <p class="indexTitle">기능 및 특징</p><hr>
-                <p class="indexSubTitle">시계</p>
+                <p class="indexSubTitle">자리 연습</p>
                 <p>랄랄라 롤롤로 </p>
                 <br>
-                <p class="indexSubTitle">자리바꾸기</p>
+                <p class="indexSubTitle">단어 연습</p>
                 <p>랄랄라 롤롤로 </p>
                 <br>
-                <p class="indexSubTitle">학급 투표</p>
+                <p class="indexSubTitle">단문 연습</p>
                 <p>랄랄라 롤롤로 </p>
                 <br>
-                <p class="indexSubTitle">번호 추첨</p>
+                <p class="indexSubTitle">장문 연습</p>
                 <p>랄랄라 롤롤로 </p>
             </article>
             <article class="introBox">
                 <p class="indexTitle">이런 점이 좋아요.</p><hr>
-                <p class="indexSubTitle">플래시보다 강한 보안</p>
+                <p class="indexSubTitle">오류 없이 정확한 연습</p>
                 <p>랄랄라 롤롤로 </p>
                 <br>
                 <p class="indexSubTitle">심플하고 부드러운 UI</p>
@@ -204,8 +234,7 @@
             <article class="introBox">
                 <p class="indexTitle">이런 점은 안좋을 수 있어요.</p><hr>
                 <p class="indexSubTitle">주제넘는 성능 요구 및 용량</p>
-                <p id="download">그저 학급 관리만 하는 도구 주제에 성능과 용량을 많이 요구할 수도 있어요. 270MB라는 용량이 작아보일 수 있어도 플로피 디스크 188개 분량이랍니다.
-                <br>또한, 부드러운 UI를 재현하기 위해 많은 성능을 요구할 수도 있어요.</p>
+                <p id="download">랄랄라 롤롤로</p>
             </article>
         </section>
         <section>
@@ -218,7 +247,7 @@
                         <p class="p12">Windows (.exe)<br>32bit 및 64bit</p>
                     </div>
                     <div class="bubble_"><button class="downloadBtn" ondragstart="return false" alt="140x140" onclick="javascript:location.href='//ntws.kr/cotton_candy/download.php?os=1';"><i class="xi-apple"></i></button>
-                        <p class="p12">macOS (.dmg)<br>Intel 64bit</p>
+                        <p class="p12">macOS (.dmg)<br>Universal 64bit</p>
                     </div>
                     <div class="bubble_"><button class="downloadBtn" ondragstart="return false" alt="140x140"><i class="xi-ubuntu"></i></button>
                         <p class="p12">Linux (.deb)<br>준비중</p>
@@ -255,7 +284,7 @@
                     <tr>
                         <td>CPU</td>
                         <td>Intel Pentium 4 이상의 SSE3 지원 CPU</td>
-                        <td>Intel CPU 또는 로제타를 동반한 Apple Silicon 칩셋</td>
+                        <td>Intel CPU 또는 Apple Silicon 칩셋</td>
                         <td> - </td>
                     </tr>
                     <tr>
@@ -266,13 +295,13 @@
                     </tr>
                     <tr>
                         <td>저장 공간</td>
-                        <td>300MB 이상</td>
-                        <td>300MB 이상</td>
+                        <td>500MB 이상</td>
+                        <td>500MB 이상</td>
                         <td> - </td>
                     </tr>
                 </table>
                 <p class="indexSubSubTitle">라이센스</p>
-                <a href="./licenses">바로가기</a>
+                <a href="./licenses">아직 준비중이에요.</a>
             </article>
         </section>
     </div>

@@ -9,9 +9,21 @@
 	src: url('./DOSSaemmul.woff') format('woff');
 }
 *{font-family:'Noto Sans KR';outline: none;}
+html{
+	scroll-behavior: smooth;
+}
+a:hover{
+	text-decoration: none;
+}
+a:visited{
+	color: black;
+}
+a:link{
+	color: black;
+}
 ::selection{color:mediumaquamarine}
 body{margin:0; background: black;color:white;}
-.contentsBox{padding-top: 50px;}
+.contentsBox{padding: 50px 0;}
 .titleBox{
 	display: flex;
 	flex-direction: column;
@@ -35,14 +47,6 @@ body{margin:0; background: black;color:white;}
 .mainDesc{font-family: Dunggeunmo;
 	font-size: 1.5em;
 	text-align: center;
-}
-.ccTitle{
-	font-size:5em;
-	margin-top: 20px;
-}
-.ccDesc{
-	font-size:3em;
-	margin:0
 }
 footer{
 	background: black;
@@ -179,7 +183,7 @@ footer{
 	width:100%;
 	}
 /*여기까지 네비게이션 바 CSS*/
-@media screen and (min-width:1320px){
+@media screen and (min-width:800px){
 	.navbar{display: flex;justify-content: space-between;}
     .navbar .navright li ul{
         right:0px;
@@ -189,16 +193,7 @@ footer{
 	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
 	.navbar ul li div{margin-left:3px}
 }
-@media screen and (max-width:1320px) and (min-width:1170px){
-	.navbar{display: flex;justify-content: space-between;}
-    .navbar .navright li ul{
-        right:0px;
-    }
-	.navml{display:none;}
-	.navmr{display:none;}
-	p{line-height:1.2em;}.p08{font-size:0.8em;}.p15{font-size:1.5em;}.p12{font-size:1.2em;}.p2{font-size: 2em;}button,select{font-size: 1em;}
-}
-@media screen and (max-width:1169px) and (min-width:800px){
+/* @media screen and (max-width:1320px) and (min-width:800px){
 	.navbar{display: flex;justify-content: space-between;}
 	.navbar .navright li ul{
 		right:0px;
@@ -225,7 +220,7 @@ footer{
 		max-height:100px;
 		padding:5px;
 	}
-}
+} */
 @media screen and (max-width:799px){
 .navbar{display: flex;justify-content: space-between;}
 .navright{display:none;}
